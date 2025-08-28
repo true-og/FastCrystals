@@ -15,6 +15,7 @@ repositories {
     maven { url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/") }
     maven { url = uri("https://repo.codemc.org/repository/nms/") }
     maven { url = uri("https://papermc.io/repo/repository/maven-public/") }
+	maven { url = uri("https://libraries.minecraft.net/") }
 }
 
 dependencies {
