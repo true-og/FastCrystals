@@ -39,8 +39,6 @@ public final class FastCrystalsPlugin extends JavaPlugin implements Listener {
       new FastCrystalsPlaceholder(this).register();
     }
 
-    this.crystalDamage = this.assignCrystalDamageFromServerVersion(Bukkit.getBukkitVersion().split("-")[0]);
-
     String disableMessage = this.colorize(Objects.requireNonNull(this.configuration.getString("disableMessage")));
     String enableMessage = this.colorize(Objects.requireNonNull(this.configuration.getString("enableMessage")));
 
@@ -82,19 +80,6 @@ public final class FastCrystalsPlugin extends JavaPlugin implements Listener {
 
   public boolean isUsingFastCrystals(UUID uniqueId) {
     return this.playersUUID.contains(uniqueId);
-  }
-
-  private CrystalDamage assignCrystalDamageFromServerVersion(String version) {
-    return switch (version) {
-      case "1.20.5", "1.20.6" -> new CrystalDamage_v1_20_6();
-
-      default -> {
-        Bukkit.getPluginManager().disablePlugin(this);
-        throw new IllegalStateException(
-            "Plugin is disabling due to unsupported minecraft version (" + version + "). This version of plugin support only 1.20.5+ versions."
-        );
-      }
-    };
   }
 
   private static final Pattern HEX_PATTERN = Pattern.compile("#[A-Fa-f0-9]{6}");

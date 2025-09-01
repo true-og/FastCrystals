@@ -1,6 +1,6 @@
 plugins {
     id("java")
-    id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("com.gradleup.shadow") version "8.3.6"
 }
 
 group = "xyz.exyron.fastcrystals"
@@ -25,6 +25,5 @@ dependencies {
     compileOnly("me.clip:placeholderapi:2.11.6")
 
     implementation(project(":shared"))
-    implementation(project(":v1_20_6"))
 }
 
