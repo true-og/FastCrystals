@@ -3,7 +3,7 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 plugins {
     id("java")
     eclipse
-    id("com.gradleup.shadow") version "8.3.6" apply false
+    id("com.gradleup.shadow") version "8.3.8" apply false
 }
 
 group = "xyz.exyron.fastcrystals"
