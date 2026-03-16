@@ -2,7 +2,7 @@ plugins {
     id("org.gradle.toolchains.foojay-resolver-convention").version("0.10.0")
 }
 
-rootProject.name = "FastCrystals"
+rootProject.name = "FastCrystals-OG1"
 
 include(
     "core",
