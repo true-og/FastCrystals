@@ -13,7 +13,7 @@ version = "1.0"
 subprojects {
     pluginManager.withPlugin("com.gradleup.shadow") {
         tasks.named<ShadowJar>("shadowJar") {
-            archiveFileName.set("${rootProject.name}--${rootProject.version}.jar")
+            archiveFileName.set("${rootProject.name}-${rootProject.version}.jar")
             destinationDirectory.set(file("${rootProject.projectDir}/build/libs"))
         }
     }
