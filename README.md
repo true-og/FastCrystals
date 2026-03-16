@@ -12,7 +12,7 @@ Currently we support only **1.16.4** to **1.20.4** versions
   
 # Command presentation
 
-Messages are configurable in the file **/Exyron-FastCrystals/config.yml**
+Messages are configurable in the file **/FastCrystals-OG/config.yml**
 
 # Contact
 
