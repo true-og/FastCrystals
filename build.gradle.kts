@@ -1,3 +1,4 @@
+import org.gradle.jvm.tasks.Jar
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 
 plugins {
@@ -10,7 +11,7 @@ group = "xyz.exyron.fastcrystals"
 version = "1.0"
 
 subprojects {
-    pluginManager.withPlugin("com.github.johnrengelman.shadow") {
+    pluginManager.withPlugin("com.gradleup.shadow") {
         tasks.named<ShadowJar>("shadowJar") {
             archiveFileName.set("${rootProject.name}-${rootProject.version}.jar")
             destinationDirectory.set(file("${rootProject.projectDir}/build/libs"))
@@ -19,3 +20,11 @@ subprojects {
     }
 }
 
+
+tasks.named<Jar>("jar") {
+    enabled = false
+}
+
+tasks.named("assemble") {
+    dependsOn(":core:shadowJar")
+}
