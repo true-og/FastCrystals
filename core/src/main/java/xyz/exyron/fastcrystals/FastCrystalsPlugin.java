@@ -7,7 +7,6 @@ import java.util.UUID;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import net.md_5.bungee.api.ChatColor;
-import org.bstats.bukkit.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.EnderCrystal;
@@ -32,8 +31,6 @@ public final class FastCrystalsPlugin extends JavaPlugin implements Listener {
   @Override
   public void onEnable() {
     this.saveDefaultConfig();
-
-    new Metrics(this, BSTATS_ID);
 
     if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
       new FastCrystalsPlaceholder(this).register();

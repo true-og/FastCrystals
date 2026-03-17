@@ -15,7 +15,6 @@ repositories {
 
 dependencies {
     compileOnly("org.spigotmc:spigot:1.16.5-R0.1-SNAPSHOT")
-    implementation("org.bstats:bstats-bukkit:3.0.2")
     compileOnly("me.clip:placeholderapi:2.11.6")
 
     implementation(project(":shared"))
