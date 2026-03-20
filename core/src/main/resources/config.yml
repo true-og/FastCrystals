@@ -10,7 +10,7 @@
 defaultStatus: true
 
 # Set this value to "false" if you don't want "/fastcrystals" command to be working. (it's going to be completely disabled)
-commandEnabled: true
+commandEnabled: false
 
 enableMessage: "&7Fast crystal feature is now &aenabled&7."
 disableMessage: "&7Fast crystal feature is now &cdisabled&7."
